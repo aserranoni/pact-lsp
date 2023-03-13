@@ -7,9 +7,9 @@ jobs:
       matrix:
         ghc: ['8.10.7']
         cabal: ['3.0.0.0']
-        os: [ubuntu-latest, macOS-latest, windows-latest]
+        os: [ubuntu-latest, macOS-latest] #, windows-latest
 
-    name: Haskell GHC ${{ matrix.ghc }} sample
+    name: Pact-LSP using ${{ matrix.ghc }} for ${{matrix.os}}
     steps:
       - uses: actions/checkout@v3
       - name: Setup Haskell
